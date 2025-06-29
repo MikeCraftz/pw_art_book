@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Wingman Community Art Book</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script>
+        function showFullImage(el) {
+            const fullSrc = el.getAttribute('data-full');
+            document.getElementById('full-image').src = fullSrc;
+            document.getElementById('image-viewer').style.display = 'flex';
+        }
+
+        function hideViewer() {
+            document.getElementById('image-viewer').style.display = 'none';
+            document.getElementById('full-image').src = '';
+        }
+    </script>
+
+    <style>
+        #image-viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+            z-index: 9999;
+        }
+
+        #image-viewer img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 20px #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boot-screen">
+        <pre id="boot-text"></pre>
+        <div id="boot-continue">Click anywhere to continue<span class="dot">.</span></div>
+    </div>
+    <section id="banner">
+        <div class="banner-overlay">
+            <h1>Yo Buddy, Still Alive?</h1>
+            <h1>UNSANCTIONED SKIES : A PHYSICAL PROJECT WINGMAN FAN ART BOOK</h1>
+        </div>
+    </section>
+    <br />
+    <section id="about">
+        <div class="content-box">
+            <h2>About The Game</h2>
+            <p>Project Wingman is a combat flight-action game developed by Sector D2. It is a love letter to the Ace
+                Combat series and arcade combat flight game
+                as a whole.</p>
+            <br />
+            <p>Project Wingman : Frontline 59 is a expansion pack of Project Wingman with 6 addtional missions.</p>
+            <br />
+            <p>
+                For more information, visit the official <a
+                    href="https://store.steampowered.com/app/895870/Project_Wingman//" target="_blank">steam page</a>
+                The game was released on 1st December 2020. The game was initially released on 1st December 2020 and is available on <span style="color:#e6632c;">PC, Xbox
+                    One, PS5 and VR platform.</span>.
+            </p>
+        </div>
+        <br /><br />
+        <div class="content-box">
+            <h2>About This Project</h2>
+            <p>
+                Beyond the adrenaline-pumping aerial combat, Project Wingman's evocative world-building, intricate lore, and compelling narrative
+                delivered via the excelltently well written radio chatter and dialog. As well as a handcrafted, unqiue world building that I found extremely interesting. 
+            </p>
+            <br />
+            <p>I have been creating fan art of the game and was surprised by how much the community loved them. So
+                instead of simply publishng my art online. I want to
+                do something extra and create an artbook for them. Further expanding the world of Project Wingman for the community.</p>
+            <br />
+            <p> This project, titled UNSANCTIONED SKIES, is a  <span style="color:#e6632c;">non‐commercial fan project</span> and is not affilated with Sector
+                D2.
+                I have obtained official permission in the creation of this book and will publish it both online and
+                physical. All rights are reserve to Sector D2 and no-in game
+                assets were used directly. Sector D2 would reserve the rights to cease the production or distribution of
+                this book if requested.</p>
+            </p>
+            <br />
+            <p>
+                My vision for this book is to immerse readers within the game's universe, presenting it as a collection of in-universe military documents and geo-political analyses. 
+                This approach is deeply inspired by classic game manuals, such as the Homeworld Manual, which seamlessly integrated lore into their design. 
+                My aim is to expand upon the established world of Project Wingman and the enigmatic Sicario PMC, filling narrative gaps and weaving new stories through original lore and my artistic interpretation.
+            </p>
+            <br />
+        </div>
+        <br /><br />
+        <div class="content-box">
+            <h2>About The Book</h2>
+            <h3>What is in this book?</h3>
+            <p>
+                The book will feature original art pieces depicting all 21 main missions and the 6 Frontline 59 DLC missions, 
+                offering perspectives beyond that of Hitman 1 Monarch, the player character. 
+                Each artwork will be accompanied by extensive writing, providing my unique interpretation and imaginative expansion of the Project Wingman universe.
+            </p>
+            <br />
+            <p>
+                For the Frontline 59 missions, a separate, more concise After Action Report-style booklet will be released, detailing the actions of Reserve Division K-9A.
+            </p>
+            <br />
+            <p>
+                The overarching narrative will be presented from the viewpoint of a research institute  investigating and tracking Sicario's operations throughout the Cascadian Conflict. 
+                The book will also include detailed supplementary sections on Sicario PMC itself, covering its force composition, ORBAT and operational maps.
+            </p>
+            <br />
+            <h3>Where can I get this book?</h3>
+            <p>
+                Once the book is completed, it will be available for <span style="color:#e6632c;">free</span> as a PDF.
+                The book will also be published online across various platforms in digital format for free, likely on my
+                social media.
+            </p>
+            <br />
+            <br />
+            <p>
+                A small number of physical copies will be available for sales as well if I am able to secure a booth
+                space at C107 Winter Comiket 2025, Tokyo, Japan.
+            </p>
+            <br />
+            <p>
+                All proceeds from the sales will be used to cover printing costs for the book, transportation, booth
+                space and other related costs are covered by me personally.
+            <br />
+            <h3>Can I contribute?</h3>
+            <p>
+                Compare to my project on <a href="https://mikecraftz.github.io/signalis_community_artbook_site/"
+                    target="_blank">Signalis</a>. This book is more like a real
+                "book". I cannot just randomly put other’s artwork into it or it will become a 100 pages art albumn. I
+                aim to maintain a serious and consistent thematic tone. As such,  general artwork contributions cannot be directly integrated.
+            </p>
+            <br />
+            <p>
+                However, I am actively seeking specific contributions for specialised elements, such as detailed operational maps, 
+                authentic unit insignia for CIF/PMC factions, or lore pieces that align perfectly with the book's narrative 
+                and aesthetic. If you possess skills in these areas (e.g., map design templates from PW role-playing communities, custom unit insignia), and believe you can help elevate this project, 
+                please reach out via the contact information below.
+            </p>
+            <br />
+
+            <h3>Do you take money? Can I buy this book?</h3>
+            <p>
+                This entire project, including any commissions I request and the physical printing, is funded entirely out of my own pocket. 
+                My goal is to keep this project strictly non-profit to avoid any potential issues with publishers or developers. If you wish to support my work and help spread awareness of this art book, 
+                please consider sharing this project with others or donating via my <a href="http://ko-fi.com/amanettc"
+                target="_blank">Ko-fi</a> page.
+            </p>
+            <br />
+        </div>
+    </section>
+
+    <section id="samples">
+        <div class="content-box">
+            <h2>Sample Book Pages</h2>
+            <p>
+                Below are sample pages from the artbook. These are not final and may change as we finalise the book.
+                Click on any image to view it in full size.
+            </p>
+            <div class="grid-3x3">
+                {% for i in range(1, 17) %}
+                <div class="thumb-container">
+                    <img src="{{ url_for('static', filename='images/sample' ~ i ~ '-min.png') }}"
+                        alt="Sample page {{ i }}" class="thumb"
+                        data-full="{{ url_for('static', filename='images/sample' ~ i ~ '.png') }}" />
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section id="credits">
+        <!-- <div class="content-box">
+            <h2>Credits & Thank You</h2>
+            <p>Some folks have reached out to me to offer help in creating this book. I have also requested some help
+                for some specfic items in the book as well.</p>
+            <br />
+            <p>Below are the list of people that generiously offered their help, check out their social media or
+                consider donateing to them:</p>
+            <br />
+            <ul>
+                <li><a href="https://www.instagram.com/ms_al_chemist" target="_blank">AZ_3</a></li>
+            </ul>
+        </div> -->
+        <br /><br />
+        <div class="content-box">
+            <h2>Disclaimer and Contacts</h2>
+            <br />
+            <h3>My Contacts, Feel free to contact me if you have any questions or want to know more about this project.
+            </h3>
+            <br />
+            <p>
+                <a href="https://www.instagram.com/amanetatec/" target="_blank">Instagram</a>
+                <a href="https://x.com/amanetate10945" target="_blank">Twitter</a>
+                <a href="http://ko-fi.com/amanettc" target="_blank">Ko-fi</a>
+            </p>
+            <br />
+            <h3>Disclaimer</h3>
+            <br />
+            <br />
+            <ul>
+                <li>This project is a non-commercial fan initiative and is not affiliated with Sector D2 or any related
+                    entities.</li>
+                <li>As some of the art and writing of this book are from my own interpretation, please do not consider
+                    them canon.</li>
+                <li>All costs related to the project will be covered by me (AmaneC) personally. I will not reach out to
+                    people individually for donation/crowdfund specifically for this project.</li>
+                <li>Please let me know if someone contacted you about asking payment for this project.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage" />
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="image-viewer" style="display:none;" onclick="hideViewer()">
+        <img id="full-image" src="" alt="Full view">
+    </div>
+
+    <script>
+        const bootLines = [
+            "V1.919293. REV3",
+            "LICENSED TO USR: CT_4039",
+            "LICENSE EXPIRED PLEASE UPDATE YOUR LICENSE IMMEDIATELY",
+            "USERNAME GU1028518501 Sicario Merceanry Crops",
+            "PASSWORD ****************",
+            "…",
+            "…",
+            "…",
+            "<< LOGIN SUCCESSFUL >>",
+            "INITIALIZING CENE",
+            "…",
+            "INITIALIZED",
+            "\\",
+            "VERIFICATION ID 310347818930571",
+            "8593 8593 09192 85481 0295",
+            "98481 01923",
+            "C:\\CENE\\INT\\940\\ARCHIVE",
+            "09123.tmp corrupted",
+            "09123.tmp successfully purged",
+            "09124.tmp successfully purged",
+            "all archive successfully purged",
+            "Starting a new instance…",
+            "Instance Initiated.",
+            "Waiting…",
+            "\\\\CENE 4.8\\\\",
+            "INTERFACE INITIATED <<",
+            "Yo Buddy, Still Alive?"
+        ];
+
+        const delay = 80;
+        const bootText = document.getElementById("boot-text");
+        const bootContinue = document.getElementById("boot-continue");
+        let lineIndex = 0;
+
+        function printNextLine() {
+            if (lineIndex < bootLines.length) {
+                bootText.textContent += bootLines[lineIndex] + "\n";
+                lineIndex++;
+                setTimeout(printNextLine, delay);
+            } else {
+                bootText.textContent += "\n";
+                bootContinue.style.display = "block";
+            }
+        }
+
+        window.addEventListener("load", () => {
+            printNextLine();
+        });
+
+        document.getElementById("boot-screen").addEventListener("click", () => {
+            document.getElementById("boot-screen").classList.add("boot-fade-out");
+            setTimeout(() => {
+                document.getElementById("boot-screen").remove();
+            }, 1500);
+        });
+    </script>
+
+</body>
+
+</html>
